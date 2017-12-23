@@ -16,8 +16,9 @@ def accept(sock,addr):
     sock.close()
 
 
+port = input("Please input port which watched!\n")
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-s.bind(("10.67.110.204",9999))
+s.bind(("127.0.0.1",int(port)))
 s.listen(5)
 print "Waiting for connection"
 
